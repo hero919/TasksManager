@@ -1,0 +1,13 @@
+<md-list-item class="container" (click)="onItemClick()">
+  <md-checkbox class="completion-status" [checked]="item" (click)="onCheckBoxClick($event)"></md-checkbox>
+  <div md-line class="content" [ngClass]="{'completed': item.completed}">
+    {{item.desc}}
+  </div>
+  <div md-line class="bottom-bar">
+    <span class="due-date" *ngIf="item.dueDate">
+      {{item.dueDate | date: "yy-MM-dd"}}
+    </span>
+    <md-icon *ngIf="item.reminder" class="avatar">alarm</md-icon>
+  </div>
+  <md-icon></md-icon>
+</md-list-item>

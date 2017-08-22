@@ -1,0 +1,22 @@
+<form>
+  <h2 md-dialog-title>Invite Members</h2>
+
+  <div md-dialog-content>
+    <md-input-container class="full-width">
+      <input mdInput type="text" placeholder="Member Name" [mdAutocomplete]="autoMembers">
+    </md-input-container>
+  </div>
+
+  <div md-dialog-actions>
+    <button type="button" md-raised-button color="primary" (click)="onclick()">Save</button>
+    <button type="button" md-button md-dialog-close>Delete</button>
+
+  </div>
+
+</form>
+
+<md-autocomplete #autoMembers = "mdAutocomplete" [displayWith]="displayUser">
+  <md-option *ngFor="let item of items" [value]="item" >
+    {{item.name}}
+  </md-option>
+</md-autocomplete>
