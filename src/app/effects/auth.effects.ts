@@ -25,10 +25,6 @@ export class AuthEffects {
     .switchMap((val: { email: string, password: string }) => this.authService.login(val.email, val.password)
       .map(auth => new actions.LoginSuccessAction(auth))
       .catch(err =>  of(new actions.LoginFailAction('Login Fail'))));
-
-
-
-
-
+  
 
 }

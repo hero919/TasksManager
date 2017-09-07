@@ -6,6 +6,7 @@ import {
   MdCheckboxModule, MdDatepickerModule, MdRadioModule, MdNativeDateModule, MdSelectModule
 } from '@angular/material';
 import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.component';
+import {FormsModule, ReactiveFormsModule} from "@angular/forms";
 
 
 @NgModule({
@@ -25,7 +26,9 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MdDatepickerModule,
     MdNativeDateModule,
     MdRadioModule,
-    MdSelectModule
+    MdSelectModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   exports: [
     CommonModule,
@@ -43,7 +46,9 @@ import { ConfirmDialogComponent } from './confirm-dialog/confirm-dialog.componen
     MdDatepickerModule,
     MdNativeDateModule,
     MdRadioModule,
-    MdSelectModule
+    MdSelectModule,
+    ReactiveFormsModule,
+    FormsModule
   ],
   declarations: [ConfirmDialogComponent],
   entryComponents: [ConfirmDialogComponent]
