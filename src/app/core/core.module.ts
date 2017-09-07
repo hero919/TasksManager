@@ -32,13 +32,19 @@ import 'rxjs/add/operator/filter';
 import 'rxjs/add/operator/take';
 import 'rxjs/add/operator/count';
 import 'rxjs/add/operator/do';
+import {AppEffectsModule} from "../effects/index";
+import {ServicesModule} from "../services/index";
+import {AppStoreModule} from "../reducers/index";
 
 
 @NgModule({
   imports: [
     SharedModule,
     BrowserAnimationsModule,
-    HttpModule
+    HttpModule,
+    AppStoreModule,
+    AppEffectsModule,
+    ServicesModule.forRoot()
   ],
   declarations: [HeaderComponent, FooterComponent, SidebarComponent],
   exports: [
