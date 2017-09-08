@@ -9,6 +9,8 @@ export class AuthService {
   // Put $http service here
 
   login(email: string, password: string): Observable<any> {
+    console.log(email);
+    console.log(password);
     if (email == 'terryzhang1995@yahoo.com') {
       return Observable.of('Login Success');
     }

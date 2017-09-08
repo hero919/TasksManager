@@ -29,7 +29,7 @@ const productionReducers: ActionReducer<State> = combineReducers(reducers);
 
 // combineReducers(storeFreeze(reducers))
 // storeFreeze is to make sure no state is always changes, if one state not change properly, it will return the error
-const developmentReducers: ActionReducer<State> = compose(storeFreeze, combineReducers)(reducers);
+const developmentReducers: ActionReducer<State> = combineReducers(reducers);
 
 
 

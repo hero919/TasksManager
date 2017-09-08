@@ -24,6 +24,7 @@ export class LoginComponent implements OnInit {
   }
 
   onSubmit({value, valid}, e: Event) {
+    console.log("submit");
     e.preventDefault();
     if (!valid) {
       return;
